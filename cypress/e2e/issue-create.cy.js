@@ -114,7 +114,7 @@ describe('Issue create', () => {
     const randomWord = faker.random.word();
     const randomWords = faker.random.words();
     cy.get('[data-testid="modal:issue-create"]').within(() => {
-// test comment
+// test comment22
       //open issue type dropdown and choose Task
       cy.get('[data-testid="select:type"]').click();
       cy.get('[data-testid="select-option:Bug"]')
