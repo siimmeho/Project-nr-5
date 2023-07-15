@@ -23,7 +23,7 @@ describe('Issue delete', () => {
     // Assert, that deletion confirmation dialogue is not visible.
     cy.get('[data-testid="modal:confirm"').should('not.exist');
 
-    cy.reload()
+    cy.reload();
 
     // Assert, that issue is deleted and not displayed on the Jira board anymore.
     cy.get('[data-testid="list-issue"]')
@@ -49,7 +49,7 @@ describe('Issue delete', () => {
     // Need to close the issue details modal
     cy.get('[data-testid="icon:close"]').first().click();
 
-    cy.reload()
+    cy.reload();
 
     // Assert, that issue isnot deleted and is displayed on the Jira board.
     cy.get('[data-testid="list-issue"]').first().should('have.text', 'This is an issue of type: Task.');
