@@ -20,8 +20,6 @@ describe('Issue delete', () => {
     IssueModal.clickDeleteButton();
     IssueModal.confirmDeletion();
 
-    cy.reload();
-
     // assert, that the issue is deleted
     IssueModal.ensureIssueIsNotVisibleOnBoard(issueTitle);
 
@@ -34,8 +32,6 @@ describe('Issue delete', () => {
 
     // need to close the issue detail modal
     IssueModal.closeDetailModal();
-    
-    cy.reload();
 
     // assert, that the issue is not deleted
     IssueModal.ensureIssueIsVisibleOnBoard(issueTitle);
