@@ -118,6 +118,7 @@ describe('Issue comments creating, editing and deleting', () => {
             .contains('button', 'Delete comment')
             .click()
             .should('not.exist');
+            getIssueDetailsModal().contains(editcomment).should('not.exist');
 
     });
 });
